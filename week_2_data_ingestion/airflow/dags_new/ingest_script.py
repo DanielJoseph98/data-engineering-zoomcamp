@@ -7,8 +7,7 @@ from sqlalchemy import create_engine
 
 
 def ingest_callable(user, password, host, port, db, table_name, csv_file, execution_date):
-
-    print(f'HELLO {host} {user} {password} {port} {db}')
+    print(table_name, csv_file, execution_date)
 
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
     engine.connect()
